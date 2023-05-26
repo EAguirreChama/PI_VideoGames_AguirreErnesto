@@ -1,0 +1,20 @@
+.NavBarStyle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #03071E;
+    padding: 10px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+  }
+  
+  .NavBarStyle a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 10px;
+  }
+  
+  .NavBarStyle a:hover {
+    color: #F48C06;
+  }
+  

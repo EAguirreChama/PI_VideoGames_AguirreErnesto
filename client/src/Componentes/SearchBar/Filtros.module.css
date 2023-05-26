@@ -1,0 +1,18 @@
+.SelectContainer {
+    display: flex;
+    align-items: center;
+  }
+  
+  .Select {
+    background-color: #F48C06;
+    border: 2px solid #03071E;
+    border-radius: 5px;
+    padding: 2px;
+    font-size: 14px;
+    margin-right: 10px;
+    cursor: pointer;
+  }
+  
+  .Select option {
+    font-size: 14px;
+  }

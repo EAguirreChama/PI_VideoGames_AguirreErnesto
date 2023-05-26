@@ -1,0 +1,13 @@
+.Container {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  background-color: #6A040F;
+  border-radius: 10px;
+  width: 98%;
+  justify-content: space-between;
+}
+
+.Container2 {
+  display: flex;
+}
