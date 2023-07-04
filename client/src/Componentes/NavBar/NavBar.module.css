@@ -1,20 +1,25 @@
 .NavBarStyle {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #03071E;
-    padding: 10px;
-    border-top-left-radius: 20px;
-    border-top-right-radius: 20px;
-  }
-  
-  .NavBarStyle a {
+  display: flex;
+  justify-content:space-between;
+  align-items: center;
+  background-color: #03071E;
+  padding: 10px;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+
+.NavBarStyle a {
+    background-color: #8A0C18;
+    border-radius: 10px;
     color: #fff;
     text-decoration: none;
     margin: 0 10px;
+    padding: 8px 10px;
+    /* border: 1px soid #8A0C18; */
   }
   
   .NavBarStyle a:hover {
-    color: #F48C06;
+    color: #03071E;
+    background-color: #F48C06;
   }
   
