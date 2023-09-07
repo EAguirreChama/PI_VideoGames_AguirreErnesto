@@ -12,10 +12,10 @@ const getGenresController = async () => {
             await Genre.create({
                 name: result.name,
             });
-        }
+        };
         return Genre.findAll();
-    }
+    };
     return dbGenres
 };
 
-module.exports = getGenresController
+module.exports = getGenresController;
