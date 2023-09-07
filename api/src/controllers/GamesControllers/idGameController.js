@@ -1,5 +1,5 @@
-const idByBd  = require ("../../helpers/idController/idByBd")
-const idByApi = require ("../../helpers/idController/idByApi")
+const idByBd  = require ("../../helpers/idController/idByBd");
+const idByApi = require ("../../helpers/idController/idByApi");
 
 const idGameController = async (id) => {
     if (!isNaN(+id)) {
@@ -7,7 +7,5 @@ const idGameController = async (id) => {
     } else {
         return await idByBd(id)
     }
-
 };
-
 module.exports = idGameController
