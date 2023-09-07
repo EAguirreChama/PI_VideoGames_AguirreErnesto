@@ -32,17 +32,13 @@ await Promise.all(promises)
     .catch((error) => {
         throw new Error(error);
     });
-
-
   // Obtengo datos de la base de datos
   const dbData = await Videogame.findAll({
     include: [{ model: Genre, as: 'genres' }]
   });
-  
   // Combino los datos de la API y la base de datos
   const allData = [...dbData, ...results];
   return allData;
-
 };
 
 module.exports = allGamesController;
