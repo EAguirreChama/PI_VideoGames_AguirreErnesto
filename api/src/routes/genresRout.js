@@ -6,10 +6,8 @@ const GenerosRout = Router();
 
 // Ruta para obtener todos los generos
 GenerosRout.get("/", getGenresHandler);
-
 // Ruta para obtener un genero
 GenerosRout.get("/:id", byGenreFilteredHandler);
-
 // Ruta para crear un genero
 GenerosRout.post("/", postGenreHandler);
 
