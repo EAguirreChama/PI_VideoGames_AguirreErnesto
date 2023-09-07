@@ -14,9 +14,7 @@ const byGenreFiltered = async (genreId) => {
   const dbData = await Videogame.findAll();
   // Combino los datos de la API y la base de datos
   const allData = [...dbData, ...apiData];
-  //console.log(allData.length);
   return allData;
-
 };
 
 module.exports = byGenreFiltered;
