@@ -1,5 +1,5 @@
-const axios = require ("axios");
 require ("dotenv").config();
+const axios = require ("axios");
 const { API_KEY} = process.env;
 const URL = "https://api.rawg.io/api/platforms/lists/parents"
 
@@ -9,4 +9,4 @@ const getPlatformsControllers = async () => {
     return platforms;
 };
 
-module.exports = getPlatformsControllers
+module.exports = getPlatformsControllers;
