@@ -8,8 +8,7 @@ const idByBd = async (id) => {
         include: [{ model: Genre, as: 'genres', through: {
             attributes: []
         }}]})
-
-    console.log(data);
+    
     const VideoGamesId = {
         id: data.id,
         name: data.name,
@@ -19,8 +18,8 @@ const idByBd = async (id) => {
         released: data.released,
         rating: data.rating,
         genres: data.genres
-    }
+    };
     return VideoGamesId
 };
 
-module.exports = idByBd
+module.exports = idByBd;
