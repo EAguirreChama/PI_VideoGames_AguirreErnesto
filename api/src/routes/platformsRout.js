@@ -6,7 +6,6 @@ const PlatformsRout = Router();
 
 // Ruta para obtener todos las plataformas
 PlatformsRout.get("/", getPlatformsHandler);
-
 // Ruta para obtener una plataforma
 PlatformsRout.get("/:id", getGenresFilterHandler);
 
