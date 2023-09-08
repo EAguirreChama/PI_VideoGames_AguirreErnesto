@@ -17,7 +17,7 @@ const initialState = {
     allPlatforms: [],
     copyAllGames: [],
     filteredVideoGames: [],
-}
+};
 
 const reducer = (state = initialState, action) => {
     switch (action.type) {
@@ -34,19 +34,16 @@ const reducer = (state = initialState, action) => {
                     allVideoGames: []
                 };
             };
-
         case GET_VIDEOGAME_ID:
             return {
                 ...state,
                 videoGameDetail: action.payload
-            }
-
+            };
         case GET_VIDEOGAMES_NAME:
             return {
                 ...state,
                 allVideoGames: action.payload
-            }
-
+            };
         case VIDEOGAMES_ORDER:
             let order = action.payload === "Asc"
                 ? state.copyAllGames.sort(function (a, b) {
@@ -62,8 +59,7 @@ const reducer = (state = initialState, action) => {
             return {
                 ...state,
                 allVideoGames: order.concat([])
-            }
-
+            };
         case RATING_VIDEOGAMES:
             let rating = action.payload === "Asc"
                 ? state.copyAllGames.sort(function (a, b) {
@@ -79,8 +75,7 @@ const reducer = (state = initialState, action) => {
             return {
                 ...state,
                 allVideoGames: rating.concat([])
-            }
-
+            };
         case ORIGIN_VIDEOGAMES:
             const origin = action.payload;
             let filteredVideoGames;
@@ -95,42 +90,34 @@ const reducer = (state = initialState, action) => {
             return {
                 ...state,
                 allVideoGames:filteredVideoGames,
-            }
-
+            };
         case GET_GENRES:
             return {
                 ...state,
                 allGenres: action.payload
-            }
-
+            };
         case GENRES_FILTER:
             return {
                 ...state,
                 allVideoGames: action.payload
-            }
-
+            };
         case GET_PLATFORMS:
             return {
                 ...state,
                 allPlatforms: action.payload
-            }
-
+            };
         case PLATFORMS_FILTER:
             return {
                 ...state,
                 allVideoGames: action.payload
-            }
-
+            };
         case POST_VIDEOGAME:
             return {
                 ...state,
                 allVideoGames: [action.payload, ...state.allVideoGames]
-            }
-
-
+            };
         default:
             return { ...state }
     };
 };
-
 export default reducer;
