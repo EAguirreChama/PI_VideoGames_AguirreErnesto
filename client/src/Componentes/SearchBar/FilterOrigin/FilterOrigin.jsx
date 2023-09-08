@@ -1,14 +1,12 @@
-import { originVideoGames } from "../../../redux/ActionsGames/originVideoGames";
-import { useDispatch, useSelector} from "react-redux";
-import React, { useState} from "react";
 import style from "../Filtros.module.css";
+import React, { useState} from "react";
+import { useDispatch, useSelector} from "react-redux";
+
+import { originVideoGames } from "../../../redux/ActionsGames/originVideoGames";
 
 const OriginGame = () => {
-
     const[selectedOrigin, setSelectedOrigin] = useState("ALL")
-
     const dispatch = useDispatch();
-
     const originGames = useSelector(state => state.allVideoGames)
 
     const handleOriginChange = (event) => {
@@ -28,5 +26,4 @@ const OriginGame = () => {
         </div>
     )
 };
-
 export default OriginGame;
