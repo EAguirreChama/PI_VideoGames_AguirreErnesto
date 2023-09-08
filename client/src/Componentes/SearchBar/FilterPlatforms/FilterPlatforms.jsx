@@ -1,8 +1,10 @@
-import { useDispatch, useSelector } from "react-redux";
-import { getVideoGames } from "../../../redux/ActionsGames/getVideoGames";
 import style from "../Filtros.module.css";
-import { getPlatforms } from "../../../redux/ActionsPlatforms/getPlatforms";
+
+import { useDispatch, useSelector } from "react-redux";
 import React, { useEffect } from "react";
+
+import { getPlatforms } from "../../../redux/ActionsPlatforms/getPlatforms";
+import { getVideoGames } from "../../../redux/ActionsGames/getVideoGames";
 import { platformsFilter } from "../../../redux/ActionsPlatforms/filterPlatforms";
 
 const FilterPlatforms = () => {
@@ -15,10 +17,7 @@ const FilterPlatforms = () => {
     
 
     const platforms = useSelector(state => state.allPlatforms);
-
     const videoGames = useSelector(state => state.allVideoGames);
-
-
 
     function idCoincidentes(arr) {
             if(arr.length === 0) {
@@ -61,7 +60,4 @@ const FilterPlatforms = () => {
         </div>
     )
 };
-
 export default FilterPlatforms;
-
-
