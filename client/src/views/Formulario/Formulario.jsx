@@ -11,5 +11,4 @@ const Formulario = () => {
         </div>
     );
 };
-
 export default Formulario;
