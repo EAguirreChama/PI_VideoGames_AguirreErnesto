@@ -1,13 +1,12 @@
+import style from "./Search.module.css"
 import React from "react";
+
 import { useState } from "react";
 import { useDispatch } from "react-redux";
 import { getVideoGameName } from "../../../redux/ActionsGames/getVideoGameName";
-import style from "./Search.module.css"
 
 const Search = () => {
-
     const dispatch = useDispatch();
-
     const [name, setName] = useState("")
 
     const handleInput = (event) => {
@@ -28,5 +27,4 @@ const Search = () => {
         </div>
     )
 };
-
 export default Search;
