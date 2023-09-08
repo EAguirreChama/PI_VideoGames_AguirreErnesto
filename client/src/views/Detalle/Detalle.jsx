@@ -11,5 +11,4 @@ const Detalle = () => {
         </div>
     );
 };
-
 export default Detalle;
