@@ -4,7 +4,6 @@ import style from "./CardsContainer.module.css"
 import { useState } from "react";
 import Pagination from "../../Paginacion/Paginacion";
 
-
 const CardsContainer = () => {
 
     const [paginaActual, setPaginaActual] = useState(1)
@@ -22,7 +21,7 @@ const CardsContainer = () => {
 
     const clickPag = (numeroPag) => {
         setPaginaActual(numeroPag)
-    }
+    };
 
     return (
         <div className={style.container}>
@@ -45,5 +44,4 @@ const CardsContainer = () => {
         </div>
     )
 };
-
 export default CardsContainer
