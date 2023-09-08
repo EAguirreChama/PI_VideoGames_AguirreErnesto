@@ -7,7 +7,6 @@ import Search from "./Search";
 import style from "./SearchBar.module.css"
 
 const SearchBar = () => {
-
     return (
         <div className={style.Container}>
             <div className={style.Container2}>
@@ -20,6 +19,5 @@ const SearchBar = () => {
             <Search/>
         </div>
     )
-}
-
+}:
 export default SearchBar;
