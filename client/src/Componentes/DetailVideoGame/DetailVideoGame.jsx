@@ -8,11 +8,8 @@ import BotonGenres from "./Botones/Genres/Genres";
 import { stripHtmlTags } from "./Helper";
 
 const DetailVideoGame = () => {
-
     const dispatch = useDispatch();
-
     const detail = useSelector(state => state.videoGameDetail);
-
     const { id } = useParams();
 
     useEffect(() => {
@@ -44,5 +41,4 @@ const DetailVideoGame = () => {
         </div>
     )
 }
-
 export default DetailVideoGame
