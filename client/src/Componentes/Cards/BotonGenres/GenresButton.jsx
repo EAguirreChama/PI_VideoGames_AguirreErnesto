@@ -1,7 +1,6 @@
 import React from "react";
 import style from "./GenresButton.module.css";
 
-
 const GenresButton = ({ onClick, isExpanded }) => {
   return (
     <button className={style.button} onClick={onClick}>
@@ -9,5 +8,4 @@ const GenresButton = ({ onClick, isExpanded }) => {
     </button>
   );
 };
-
 export default GenresButton;
