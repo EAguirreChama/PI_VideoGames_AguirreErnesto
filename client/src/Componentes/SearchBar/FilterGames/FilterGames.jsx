@@ -1,10 +1,10 @@
-import { getVideoGames } from "../../../redux/ActionsGames/getVideoGames";
-import { videoGamesOrder } from "../../../redux/ActionsGames/filterVideoGames";
 import { useDispatch } from "react-redux"
 import style from "../Filtros.module.css";
 
-const OrderAlf = () => {
+import { getVideoGames } from "../../../redux/ActionsGames/getVideoGames";
+import { videoGamesOrder } from "../../../redux/ActionsGames/filterVideoGames";
 
+const OrderAlf = () => {
     const dispatch = useDispatch();
 
     const handleid = (e) => {
@@ -18,7 +18,7 @@ const OrderAlf = () => {
             dispatch(videoGamesOrder(optionElementId))
         }
     };
-
+    
     return (
         <div className={style.SelectContainer}>
             <select className={style.Select} onChange={(e) => handleid(e)}>
@@ -29,5 +29,4 @@ const OrderAlf = () => {
         </div>
     )
 };
-
 export default OrderAlf;
