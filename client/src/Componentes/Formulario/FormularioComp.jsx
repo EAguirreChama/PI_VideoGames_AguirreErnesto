@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import style from "./FormularioComp.module.css";
 import { useDispatch, useSelector } from "react-redux";
+
 import { postVideoGame } from "../../redux/ActionsGames/postVideoGame";
 import { getPlatforms } from "../../redux/ActionsPlatforms/getPlatforms";
 import { getGenres } from "../../redux/ActionsGenres/getGenres";
@@ -52,7 +53,7 @@ const FormularioComp = () => {
       platforms: [...form.platforms, event.target.value 
       ],
     })
-  }
+  };
 
   const changeHandler = (event) => {
     event?.preventDefault()
@@ -108,8 +109,6 @@ const FormularioComp = () => {
     setForm({ ...form, [type]: updatedArray });
   };
 
-
-
   return (
     <form onSubmit={(e) => submitHandler(e)} className={style.form}>
       <div className={style.formGroup}>
@@ -119,6 +118,7 @@ const FormularioComp = () => {
           </label>
           {errors.name && <span className={style.error}>{errors.name}</span>}
         </div>
+        
         <input
           type="text"
           onChange={(e) => changeHandler(e)}
@@ -136,6 +136,7 @@ const FormularioComp = () => {
             <span className={style.error}>{errors.description}</span>
           )}
         </div>
+        
         <textarea
           onChange={(e) => changeHandler(e)}
           name="description"
@@ -152,6 +153,7 @@ const FormularioComp = () => {
             <span className={style.error}>{errors.platforms}</span>
           )}
         </div>
+        
         <select onChange={(e) => handlePlatforms(e)} className={style.selectField}>
           {platforms.sort().map((plat) => (
             <option key={plat.id} value={plat.name}>
@@ -159,6 +161,7 @@ const FormularioComp = () => {
             </option>
           ))}
         </select>
+        
         <ul className={style.List}>
           {form.platforms.map((plat, index) => (
             <li key={index}>
@@ -168,7 +171,6 @@ const FormularioComp = () => {
           ))}
         </ul>
 
-
         <div className={style.containerMensaje}>
           <label htmlFor="imagen" className={style.label}>
             Imagen:
@@ -177,6 +179,7 @@ const FormularioComp = () => {
             <span className={style.error}>{errors.background_image}</span>
           )}
         </div>
+        
         <input
           type="text"
           onChange={(e) => changeHandler(e)}
@@ -194,6 +197,7 @@ const FormularioComp = () => {
             <span className={style.error}>{errors.released}</span>
           )}
         </div>
+        
         <input
           type="date"
           onChange={(e) => changeHandler(e)}
@@ -210,6 +214,7 @@ const FormularioComp = () => {
             <span className={style.error}>{errors.rating}</span>
           )}
         </div>
+        
         <input
           type="number"
           onChange={(e) => changeHandler(e)}
@@ -228,6 +233,7 @@ const FormularioComp = () => {
             <span className={style.error}>{errors.genres}</span>
           )}
         </div>
+        
         <select onChange={(e) => handleGenres(e)} className={style.selectField}>
           {genres.sort().map((genre) => (
             <option key={genre.id} value={genre.id}>
@@ -251,5 +257,4 @@ const FormularioComp = () => {
     </form>
   );
 };
-
 export default FormularioComp;
