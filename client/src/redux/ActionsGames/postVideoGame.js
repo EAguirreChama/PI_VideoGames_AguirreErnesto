@@ -1,7 +1,6 @@
 import axios from "axios";
 
 export const POST_VIDEOGAME = "POST_VIDEOGAME"
-
 export const postVideoGame = (form) => {
   return async function (dispatch) {
     try {
