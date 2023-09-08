@@ -16,7 +16,7 @@ const BotonPlatforms = () => {
 
     const botonPlatforms = () => {
         setShowPlatforms(!showPlatforms);
-    }
+    };
 
     useEffect(() => {
         dispatch(getVideoGameId(id))
@@ -39,5 +39,4 @@ const BotonPlatforms = () => {
         </div>
     )
 }
-
 export default BotonPlatforms;
