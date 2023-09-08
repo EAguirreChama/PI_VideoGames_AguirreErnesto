@@ -15,7 +15,7 @@ const BotonGenres = () => {
 
     const botonGenres = () => {
         setShowGenres(!showGenres)
-    }
+    };
 
     useEffect(() => {
         dispatch(getVideoGameId(id))
@@ -38,5 +38,4 @@ const BotonGenres = () => {
         </div>
     )
 }
-
 export default BotonGenres
