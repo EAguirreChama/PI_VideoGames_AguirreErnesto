@@ -3,11 +3,8 @@ import { Route, useLocation , Routes } from 'react-router-dom';
 import { Detalle, Formulario, Home, Landing } from './views/index';
 import NavBar from './Componentes/NavBar/NavBar';
 
-
 function App() {
-
   const location = useLocation();
-
   return (
     <div className="App">
       {location.pathname !== "/" && <NavBar/>}
@@ -23,5 +20,4 @@ function App() {
     </div>
   );
 };
-
 export default App;
