@@ -7,7 +7,6 @@
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
 }
-
 .NavBarStyle a {
     background-color: #8A0C18;
     border-radius: 10px;
@@ -15,11 +14,8 @@
     text-decoration: none;
     margin: 0 10px;
     padding: 8px 10px;
-    /* border: 1px soid #8A0C18; */
   }
-  
   .NavBarStyle a:hover {
     color: #03071E;
     background-color: #F48C06;
   }
-  
