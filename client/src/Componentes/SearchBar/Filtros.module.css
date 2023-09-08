@@ -2,7 +2,6 @@
     display: flex;
     align-items: center;
   }
-  
   .Select {
     background-color: #F48C06;
     border: 2px solid #03071E;
@@ -12,7 +11,6 @@
     margin-right: 10px;
     cursor: pointer;
   }
-  
   .Select option {
     font-size: 14px;
   }
