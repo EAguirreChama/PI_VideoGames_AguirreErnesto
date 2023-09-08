@@ -1,6 +1,7 @@
 import style from "./Home.module.css"
 import CardsContainer from "../../Componentes/Cards/CardsContainer/CardsContainer";
 import SearchBar from "../../Componentes/SearchBar/SearchBar/SearchBar";
+
 import { useDispatch, useSelector } from "react-redux";
 import { useEffect } from "react";
 import { getVideoGames } from "../../redux/ActionsGames/getVideoGames";
@@ -9,7 +10,6 @@ import { getGenres } from "../../redux/ActionsGenres/getGenres";
 const Home = () => {
 
     const dispatch = useDispatch();
-
     const allVideoGames = useSelector(state => state.allVideoGames);
 
     useEffect(() => {
