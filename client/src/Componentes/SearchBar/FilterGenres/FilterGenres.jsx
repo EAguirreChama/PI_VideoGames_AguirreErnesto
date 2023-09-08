@@ -1,12 +1,12 @@
+import style from "../Filtros.module.css";
 import { useDispatch, useSelector } from "react-redux";
+
 import { genresFilter } from "../../../redux/ActionsGenres/filterGenres";
 import { getVideoGames } from "../../../redux/ActionsGames/getVideoGames";
-import style from "../Filtros.module.css";
 
 const FilterGenres = () => {
 
     const genres = useSelector(state => state.allGenres);
-
     const dispatch = useDispatch();
 
     const handleid = (e) => {
@@ -33,5 +33,4 @@ const FilterGenres = () => {
         </div>
     )
 };
-
 export default FilterGenres;
