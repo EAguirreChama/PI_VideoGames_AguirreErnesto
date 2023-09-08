@@ -4,13 +4,10 @@ import GenresButton from "../BotonGenres/GenresButton";
 import style from "./Card.module.css"
 
 const Card = ({ image, name, genres, id , rating}) => {
-
     const [mostrarGenres, setMostrarGenres] = useState(false);
-
     const expandir = () => {
         setMostrarGenres(!mostrarGenres);
     }
-
     return (
         <div className={style.Card}>
             <Link to={`/detailVideoGame/${id}`}>
@@ -33,5 +30,4 @@ const Card = ({ image, name, genres, id , rating}) => {
         </div>
     )
 }
-
 export default Card;
