@@ -1,10 +1,10 @@
+import style from "../Filtros.module.css";
+import { useDispatch } from "react-redux";
+
 import { getVideoGames } from "../../../redux/ActionsGames/getVideoGames";
 import { ratingVideoGames } from "../../../redux/ActionsGames/filterRatingGames";
-import { useDispatch } from "react-redux";
-import style from "../Filtros.module.css";
 
 const Rating = () => {
-
     const dispatch = useDispatch();
 
     const handleid = (e) => {
@@ -29,5 +29,4 @@ const Rating = () => {
         </div>
     )
 };
-
 export default Rating;
