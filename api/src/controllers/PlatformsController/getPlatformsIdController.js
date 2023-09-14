@@ -1,4 +1,5 @@
 require ("dotenv").config();
+
 const axios = require ("axios");
 const { API_KEY} = process.env;
 const URL = "https://api.rawg.io/api/games";
