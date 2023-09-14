@@ -6,4 +6,5 @@ const postGenreController = async (name) => {
     })
     return newGenre
 };
+
 module.exports = postGenreController;
