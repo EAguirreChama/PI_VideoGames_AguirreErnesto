@@ -9,5 +9,6 @@ const deleteGameController = async (id) => {
     } else {
         throw Error (`El Id: ${id} es incorrecto`)
     }
-}
+};
+
 module.exports = deleteGameController
