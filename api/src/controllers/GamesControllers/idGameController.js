@@ -8,4 +8,5 @@ const idGameController = async (id) => {
         return await idByBd(id)
     }
 };
+
 module.exports = idGameController
