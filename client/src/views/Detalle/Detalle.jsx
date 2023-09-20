@@ -1,5 +1,5 @@
 import style from "./Detalle.module.css"
-import DetailVideoGame from "../../Componentes/DetailVideoGame/DetailVideoGame";
+import DetailVideoGame from "../../Componentes/DetailVideoGame/DetailVideoGame"
 
 const Detalle = () => {
     return (
@@ -9,6 +9,7 @@ const Detalle = () => {
             </div>
             <DetailVideoGame/>
         </div>
-    );
-};
-export default Detalle;
+    )
+}
+
+export default Detalle
