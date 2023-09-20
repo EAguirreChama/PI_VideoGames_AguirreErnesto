@@ -1,23 +1,24 @@
 import { useDispatch } from "react-redux"
-import style from "../Filtros.module.css";
+import style from "../Filtros.module.css"
 
-import { getVideoGames } from "../../../redux/ActionsGames/getVideoGames";
-import { videoGamesOrder } from "../../../redux/ActionsGames/filterVideoGames";
+import { getVideoGames } from "../../../redux/ActionsGames/getVideoGames"
+import { videoGamesOrder } from "../../../redux/ActionsGames/filterVideoGames"
 
 const OrderAlf = () => {
-    const dispatch = useDispatch();
+    
+    const dispatch = useDispatch()
 
     const handleid = (e) => {
-        const index = e.target.selectedIndex;
-        const optionElement = e.target.childNodes[index];
-        const optionElementId = optionElement.getAttribute('id');
+        const index = e.target.selectedIndex
+        const optionElement = e.target.childNodes[index]
+        const optionElementId = optionElement.getAttribute('id')
 
         if (optionElementId === "All") {
             dispatch(getVideoGames())
         } else {
             dispatch(videoGamesOrder(optionElementId))
         }
-    };
+    }
     
     return (
         <div className={style.SelectContainer}>
@@ -28,5 +29,6 @@ const OrderAlf = () => {
             </select>
         </div>
     )
-};
-export default OrderAlf;
+}
+
+export default OrderAlf
