@@ -1,17 +1,17 @@
-import { useState, useEffect } from "react";
-import style from "./FormularioComp.module.css";
-import { useDispatch, useSelector } from "react-redux";
+import { useState, useEffect } from "react"
+import style from "./FormularioComp.module.css"
+import { useDispatch, useSelector } from "react-redux"
 
-import { postVideoGame } from "../../redux/ActionsGames/postVideoGame";
-import { getPlatforms } from "../../redux/ActionsPlatforms/getPlatforms";
-import { getGenres } from "../../redux/ActionsGenres/getGenres";
+import { postVideoGame } from "../../redux/ActionsGames/postVideoGame"
+import { getPlatforms } from "../../redux/ActionsPlatforms/getPlatforms"
+import { getGenres } from "../../redux/ActionsGenres/getGenres"
 
 const FormularioComp = () => {
-  const genres = useSelector((state) => state.allGenres);
-  const platforms = useSelector((state) => state.allPlatforms);
-  const dispatch = useDispatch();
+  const genres = useSelector((state) => state.allGenres)
+  const platforms = useSelector((state) => state.allPlatforms)
+  const dispatch = useDispatch()
 
-  const expRegUrl = /^https?:\/\/(www\.)?[a-z0-9-]+(\.[a-z0-9-]+)+([/?].*)?$/i;
+  const expRegUrl = /^https?:\/\/(www\.)?[a-z0-9-]+(\.[a-z0-9-]+)+([/?].*)?$/i
 
   const [form, setForm] = useState({
     name: "",
@@ -21,12 +21,12 @@ const FormularioComp = () => {
     released: "",
     rating: "",
     genres: [],
-  });
+  })
 
   useEffect(() => {
     dispatch(getPlatforms());
     dispatch(getGenres());
-  }, [dispatch]);
+  }, [dispatch])
 
   const [errors, setErrors] = useState({
     name: "",
@@ -36,15 +36,15 @@ const FormularioComp = () => {
     released: "",
     rating: "",
     genres: [],
-  });
+  })
 
   const handleGenres = (event) => {
     event?.preventDefault()
     setForm({
       ...form,
       genres: [...form.genres, event.target.value],
-    });
-  };
+    })
+  }
 
   const handlePlatforms = (event) => {
     event?.preventDefault()
@@ -53,44 +53,52 @@ const FormularioComp = () => {
       platforms: [...form.platforms, event.target.value 
       ],
     })
-  };
+  }
 
   const changeHandler = (event) => {
     event?.preventDefault()
-    const property = event.target.name;
-    const value = event.target.value;
+    const property = event.target.name
+    const value = event.target.value
 
-    validate({ ...form, [property]: value });
-    setForm({ ...form, [property]: value });
-  };
+    validate({ ...form, [property]: value })
+    setForm({ ...form, [property]: value })
+  }
 
   const validate = (form) => {
-    const newErrors = {};
+    const newErrors = {}
 
-    if (form.name.trim() === "") newErrors.name = "El nombre es obligatorio";
+    if (form.name.trim() === "") newErrors.name = "El nombre es obligatorio"
+    
     if (form.description.trim() === "")
-      newErrors.description = "La descripción es obligatoria";
+      newErrors.description = "La descripción es obligatoria"
+  
     if (form.platforms.length === 0)
-      newErrors.platforms = "Tienes que colocar por lo menos 1 plataforma";
+      newErrors.platforms = "Tienes que colocar por lo menos 1 plataforma"
+    
     if (!expRegUrl.test(form.background_image)) 
-      newErrors.background_image = "Url invalido";
+      newErrors.background_image = "Url invalido"
+    
     if (form.released.trim() === "")
-      newErrors.released = "Tienes que colocar una fecha";
+      newErrors.released = "Tienes que colocar una fecha"
+    
     if (form.rating.trim() === "")
-      newErrors.rating = "Tienes que colocar un rating";
-    const ratingValue = parseFloat(form.rating);
+      newErrors.rating = "Tienes que colocar un rating"
+    
+    const ratingValue = parseFloat(form.rating)
+    
     if (isNaN(ratingValue) || ratingValue < 0 || ratingValue > 5) {
-      newErrors.rating = "El rating debe ser un número entre 0 y 5";
+      newErrors.rating = "El rating debe ser un número entre 0 y 5"
     }
+    
     if (form.genres.length === 0)
-      newErrors.genres = "Tienes que colocar un género";
+      newErrors.genres = "Tienes que colocar un género"
 
     setErrors(newErrors);
-  };
+  }
 
   const submitHandler = (event) => {
-    event?.preventDefault();
-    dispatch(postVideoGame(form));
+    event?.preventDefault()
+    dispatch(postVideoGame(form))
     setForm({
       name: "",
       description: "",
@@ -99,15 +107,15 @@ const FormularioComp = () => {
       released: "",
       rating: "",
       genres: [],
-    });
-  };
+    })
+  }
 
   const handleRemove = (index, type, event) => {
     event?.preventDefault()
-    let updatedArray = [...form[type]];
-    updatedArray.splice(index, 1);
-    setForm({ ...form, [type]: updatedArray });
-  };
+    let updatedArray = [...form[type]]
+    updatedArray.splice(index, 1)
+    setForm({ ...form, [type]: updatedArray })
+  }
 
   return (
     <form onSubmit={(e) => submitHandler(e)} className={style.form}>
@@ -251,10 +259,12 @@ const FormularioComp = () => {
           ))}
         </ul>
       </div>
+      
       <button type="submit" className={style.submitButton}>
         Crear Juego
       </button>
     </form>
   );
-};
+}
+
 export default FormularioComp;
