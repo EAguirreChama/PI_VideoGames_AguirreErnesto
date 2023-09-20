@@ -14,6 +14,7 @@ const Landing = () => {
                 </Link>
                 <h5 className={style.miniTitulo}>Presiona para ir</h5>
         </div>
-    );
-};
-export default Landing;
+    )
+}
+
+export default Landing
