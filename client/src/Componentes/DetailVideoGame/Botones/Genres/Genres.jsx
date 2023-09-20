@@ -1,21 +1,21 @@
-import { getVideoGameId } from "../../../../redux/ActionsGames/getVideoGameId";
-import { useParams } from "react-router-dom";
-import { useDispatch, useSelector } from "react-redux";
-import React, { useState, useEffect} from "react";
+import { getVideoGameId } from "../../../../redux/ActionsGames/getVideoGameId"
+import { useParams } from "react-router-dom"
+import { useDispatch, useSelector } from "react-redux"
+import React, { useState, useEffect} from "react"
 import style from "../../DetailVideoGame.module.css"
 
 const BotonGenres = () => {
-    const dispatch = useDispatch();
+    const dispatch = useDispatch()
 
-    const detail = useSelector(state => state.videoGameDetail);
+    const detail = useSelector(state => state.videoGameDetail)
 
-    const { id } = useParams();
+    const { id } = useParams()
 
-    const [showGenres, setShowGenres] = useState(false);
+    const [showGenres, setShowGenres] = useState(false)
 
     const botonGenres = () => {
         setShowGenres(!showGenres)
-    };
+    }
 
     useEffect(() => {
         dispatch(getVideoGameId(id))
@@ -38,4 +38,5 @@ const BotonGenres = () => {
         </div>
     )
 }
+
 export default BotonGenres
