@@ -1,10 +1,11 @@
-import './App.css';
-import { Route, useLocation , Routes } from 'react-router-dom';
-import { Detalle, Formulario, Home, Landing } from './views/index';
-import NavBar from './Componentes/NavBar/NavBar';
+import './App.css'
+import { Route, useLocation , Routes } from 'react-router-dom'
+import { Detalle, Formulario, Home, Landing } from './views/index'
+import NavBar from './Componentes/NavBar/NavBar'
 
 function App() {
-  const location = useLocation();
+  const location = useLocation()
+  
   return (
     <div className="App">
       {location.pathname !== "/" && <NavBar/>}
@@ -18,6 +19,7 @@ function App() {
       <Route path='*' element={<Landing/>}/>
       </Routes>
     </div>
-  );
-};
-export default App;
+  )
+}
+
+export default App
