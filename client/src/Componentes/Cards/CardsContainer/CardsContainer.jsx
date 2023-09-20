@@ -1,8 +1,8 @@
 import { useSelector } from "react-redux"
-import Card from "../Card/Card";
+import Card from "../Card/Card"
 import style from "./CardsContainer.module.css"
-import { useState } from "react";
-import Pagination from "../../Paginacion/Paginacion";
+import { useState } from "react"
+import Pagination from "../../Paginacion/Paginacion"
 
 const CardsContainer = () => {
 
@@ -10,18 +10,18 @@ const CardsContainer = () => {
 
     const allVideoGames = useSelector(state => state.allVideoGames)
 
-    const gamesPorPag = 15;
-    const ultIndex = paginaActual * gamesPorPag;
-    const primerIndex = ultIndex - gamesPorPag;
+    const gamesPorPag = 15
+    const ultIndex = paginaActual * gamesPorPag
+    const primerIndex = ultIndex - gamesPorPag
 
     const actualGames = allVideoGames.slice(
         primerIndex,
         ultIndex
-    );
+    )
 
     const clickPag = (numeroPag) => {
         setPaginaActual(numeroPag)
-    };
+    }
 
     return (
         <div className={style.container}>
@@ -43,5 +43,6 @@ const CardsContainer = () => {
             </div>
         </div>
     )
-};
+}
+
 export default CardsContainer
