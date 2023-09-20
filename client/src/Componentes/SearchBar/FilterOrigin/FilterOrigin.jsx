@@ -1,19 +1,20 @@
-import style from "../Filtros.module.css";
-import React, { useState} from "react";
-import { useDispatch, useSelector} from "react-redux";
+import style from "../Filtros.module.css"
+import React, { useState} from "react"
+import { useDispatch, useSelector} from "react-redux"
 
-import { originVideoGames } from "../../../redux/ActionsGames/originVideoGames";
+import { originVideoGames } from "../../../redux/ActionsGames/originVideoGames"
 
 const OriginGame = () => {
+
     const[selectedOrigin, setSelectedOrigin] = useState("ALL")
     const dispatch = useDispatch();
     const originGames = useSelector(state => state.allVideoGames)
 
     const handleOriginChange = (event) => {
-        const selectedOrigin = event.target.value;
-        setSelectedOrigin(selectedOrigin);
-        dispatch(originVideoGames(selectedOrigin));
-      };
+        const selectedOrigin = event.target.value
+        setSelectedOrigin(selectedOrigin)
+        dispatch(originVideoGames(selectedOrigin))
+      }
     
     return (
         <div className={style.SelectContainer}>
@@ -25,5 +26,6 @@ const OriginGame = () => {
             {(selectedOrigin === "BD" && originGames.length === 0) && <p>No hay juegos disponibles en la base de datos.</p>}
         </div>
     )
-};
-export default OriginGame;
+}
+
+export default OriginGame
