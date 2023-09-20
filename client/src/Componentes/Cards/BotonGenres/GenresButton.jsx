@@ -1,5 +1,5 @@
-import React from "react";
-import style from "./GenresButton.module.css";
+import React from "react"
+import style from "./GenresButton.module.css"
 
 const GenresButton = ({ onClick, isExpanded }) => {
   return (
@@ -8,4 +8,5 @@ const GenresButton = ({ onClick, isExpanded }) => {
     </button>
   );
 };
+
 export default GenresButton;
