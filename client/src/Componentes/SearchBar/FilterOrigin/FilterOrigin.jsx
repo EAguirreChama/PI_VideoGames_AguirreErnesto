@@ -7,7 +7,7 @@ import { originVideoGames } from "../../../redux/ActionsGames/originVideoGames"
 const OriginGame = () => {
 
     const[selectedOrigin, setSelectedOrigin] = useState("ALL")
-    const dispatch = useDispatch();
+    const dispatch = useDispatch()
     const originGames = useSelector(state => state.allVideoGames)
 
     const handleOriginChange = (event) => {
