@@ -1,4 +1,4 @@
-import FormularioComp from "../../Componentes/Formulario/FormularioComp";
+import FormularioComp from "../../Componentes/Formulario/FormularioComp"
 import style from "./Formulario.module.css"
 
 const Formulario = () => {
@@ -9,6 +9,7 @@ const Formulario = () => {
             </div>
             <FormularioComp/>
         </div>
-    );
-};
-export default Formulario;
+    )
+}
+
+export default Formulario
