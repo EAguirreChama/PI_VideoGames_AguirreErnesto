@@ -2,9 +2,9 @@ body {
     background-color: #03071E;
 }
 .Titulo {
-  color: #FFBA08;
-  text-align: center;
-  margin: 0;
+    color: #FFBA08;
+    text-align: center;
+    margin: 0;
 }
 .container {
     display: flex;
