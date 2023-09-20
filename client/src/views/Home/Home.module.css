@@ -10,9 +10,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    /* Este es para horizontal */
     justify-content: center; 
-    /* Este es para vertical */
     align-items: center;
     margin-top: 0px;
     border: none;
