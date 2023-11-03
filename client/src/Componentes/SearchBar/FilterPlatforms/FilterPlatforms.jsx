@@ -1,40 +1,39 @@
-import { useDispatch, useSelector } from "react-redux";
-import { getVideoGames } from "../../../redux/ActionsGames/getVideoGames";
-import style from "../Filtros.module.css";
-import { getPlatforms } from "../../../redux/ActionsPlatforms/getPlatforms";
-import React, { useEffect } from "react";
-import { platformsFilter } from "../../../redux/ActionsPlatforms/filterPlatforms";
+import style from "../Filtros.module.css"
+
+import { useDispatch, useSelector } from "react-redux"
+import React, { useEffect } from "react"
+
+import { getPlatforms } from "../../../redux/ActionsPlatforms/getPlatforms"
+import { getVideoGames } from "../../../redux/ActionsGames/getVideoGames"
+import { platformsFilter } from "../../../redux/ActionsPlatforms/filterPlatforms"
 
 const FilterPlatforms = () => {
 
-    const dispatch = useDispatch();
+    const dispatch = useDispatch()
 
     useEffect(() => {
-            dispatch(getPlatforms());
-          }, [dispatch]);
+            dispatch(getPlatforms())
+          }, [dispatch])
     
-
-    const platforms = useSelector(state => state.allPlatforms);
-
-    const videoGames = useSelector(state => state.allVideoGames);
-
-
+    const platforms = useSelector(state => state.allPlatforms)
+    const videoGames = useSelector(state => state.allVideoGames)
 
     function idCoincidentes(arr) {
             if(arr.length === 0) {
                 return [];
-            };
-            const primerElemento = arr[0];
-            const idsCoincidentes = primerElemento?.platforms?.map((plat) => plat.id);
+            }
+
+            const primerElemento = arr[0]
+            const idsCoincidentes = primerElemento?.platforms?.map((plat) => plat.id)
     
             const idsFiltrados = idsCoincidentes?.filter((id) => {
                 return arr.every((elemento) => {
                     return elemento?.platforms?.some((plat) => plat.id === id);
-                });
-            });
+                })
+            })
     
             return idsFiltrados || [];
-    };
+    }
 
     const handleid = (e) => {
         const index = e.target.selectedIndex;
@@ -46,7 +45,7 @@ const FilterPlatforms = () => {
         } else {
             dispatch(platformsFilter(optionElementId))
         }
-    };
+    }
 
     return (
         <div className={style.SelectContiner}>
@@ -60,8 +59,6 @@ const FilterPlatforms = () => {
             </select>
         </div>
     )
-};
+}
 
 export default FilterPlatforms;
-
-

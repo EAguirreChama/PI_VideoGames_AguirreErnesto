@@ -2,12 +2,11 @@ import style from "./Paginacion.module.css"
 
 const Pagination = ({ gamesPorPag , totalGames , clickPag , paginaActual }) => {
 
-    const totalPages = Math.ceil(totalGames / gamesPorPag);
-
-    const pageNumbers = [];
+    const totalPages = Math.ceil(totalGames / gamesPorPag)
+    const pageNumbers = []
 
     for (let i = 0; i < totalPages; i++) {
-        pageNumbers.push(i + 1);
+        pageNumbers.push(i + 1)
     }
 
     return (
@@ -20,6 +19,7 @@ const Pagination = ({ gamesPorPag , totalGames , clickPag , paginaActual }) => {
               >
                 Anterior
               </button>
+                
               {pageNumbers.map((pageNumber) => (
                 <button
                   key={pageNumber}
@@ -29,6 +29,7 @@ const Pagination = ({ gamesPorPag , totalGames , clickPag , paginaActual }) => {
                   {pageNumber}
                 </button>
               ))}
+                
               <button
                 className={style.paginationButton}
                 onClick={() => {
@@ -38,7 +39,7 @@ const Pagination = ({ gamesPorPag , totalGames , clickPag , paginaActual }) => {
                 Siguiente
               </button>
             </div>
-    );
-};
+    )
+}
 
-export default Pagination;
+export default Pagination

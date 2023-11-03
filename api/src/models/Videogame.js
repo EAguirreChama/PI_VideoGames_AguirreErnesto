@@ -1,7 +1,6 @@
 const { DataTypes } = require('sequelize');
 // Exportamos una funcion que define el modelo
 // Luego le injectamos la conexion a sequelize.
-
 // Se exporta una función que toma como argumento sequelize
 // Instancia de Sequelize que se utiliza para establecer la conexión con la base de datos.
 

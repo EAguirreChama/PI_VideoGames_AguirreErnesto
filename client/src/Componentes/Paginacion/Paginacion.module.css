@@ -2,9 +2,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
-  }
-  
-  .paginationButton {
+}
+.paginationButton {
     padding: 5px 10px;
     margin: 0 5px;
     background-color: #6A040F;
@@ -12,28 +11,24 @@
     border: none;
     border-radius: 10px;
     cursor: pointer;
-  }
-  
-  .paginationButton:hover {
+}
+.paginationButton:hover {
     background-color: #FFBA08;
     color: black;
-  }
-  
-  .numbers {
+}
+.numbers {
     background-color: #FFBA08;
     color: black;
     cursor: pointer;
     margin-left: 5px;
     margin-right: 5px;
     border-radius: 45%;
-  }
-  .numbers:hover {
+}
+.numbers:hover {
     background-color: #6A040F;
     color: white
-  }
-
-  .currentPage {
+}
+.currentPage {
     background-color: #6A040F;
     color: #FFBA08;
-  }
-  
+}

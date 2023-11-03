@@ -4,5 +4,5 @@ export const videoGamesOrder = (filter) => {
     return {
         type: VIDEOGAMES_ORDER,
         payload: filter
-    };
-};
+    }
+}

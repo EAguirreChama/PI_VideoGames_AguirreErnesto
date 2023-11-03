@@ -1,23 +1,23 @@
-import { getVideoGames } from "../../../redux/ActionsGames/getVideoGames";
-import { ratingVideoGames } from "../../../redux/ActionsGames/filterRatingGames";
-import { useDispatch } from "react-redux";
-import style from "../Filtros.module.css";
+import style from "../Filtros.module.css"
+import { useDispatch } from "react-redux"
+
+import { getVideoGames } from "../../../redux/ActionsGames/getVideoGames"
+import { ratingVideoGames } from "../../../redux/ActionsGames/filterRatingGames"
 
 const Rating = () => {
-
-    const dispatch = useDispatch();
+    const dispatch = useDispatch()
 
     const handleid = (e) => {
-        const index = e.target.selectedIndex;
-        const optionElement = e.target.childNodes[index];
-        const optionElementId = optionElement.getAttribute('id');
+        const index = e.target.selectedIndex
+        const optionElement = e.target.childNodes[index]
+        const optionElementId = optionElement.getAttribute('id')
 
         if(optionElementId === "All") {
             dispatch(getVideoGames())
         } else {
             dispatch(ratingVideoGames(optionElementId))
         }
-    };
+    }
 
     return (
         <div className={style.SelectContainer}>
@@ -28,6 +28,6 @@ const Rating = () => {
             </select>
         </div>
     )
-};
+}
 
-export default Rating;
+export default Rating

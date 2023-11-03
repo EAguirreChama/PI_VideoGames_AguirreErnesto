@@ -6,12 +6,10 @@
     border-radius: 10px;
     font-size: 16px;
     cursor: pointer;
-  }
-  
+  } 
   .button:hover {
     background-color: #8A0C18;
   }
-  
   .button:focus {
     outline: none;
   }

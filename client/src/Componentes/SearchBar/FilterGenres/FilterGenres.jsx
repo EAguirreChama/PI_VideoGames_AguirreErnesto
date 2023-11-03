@@ -1,24 +1,25 @@
-import { useDispatch, useSelector } from "react-redux";
-import { genresFilter } from "../../../redux/ActionsGenres/filterGenres";
-import { getVideoGames } from "../../../redux/ActionsGames/getVideoGames";
-import style from "../Filtros.module.css";
+import style from "../Filtros.module.css"
+import { useDispatch, useSelector } from "react-redux"
+
+import { genresFilter } from "../../../redux/ActionsGenres/filterGenres"
+import { getVideoGames } from "../../../redux/ActionsGames/getVideoGames"
 
 const FilterGenres = () => {
 
-    const genres = useSelector(state => state.allGenres);
-
-    const dispatch = useDispatch();
+    const genres = useSelector(state => state.allGenres)
+    const dispatch = useDispatch()
 
     const handleid = (e) => {
-        const index = e.target.selectedIndex;
-        const optionElement = e.target.childNodes[index];
-        const optionElementId = optionElement.getAttribute('id');
+        const index = e.target.selectedIndex
+        const optionElement = e.target.childNodes[index]
+        const optionElementId = optionElement.getAttribute('id')
+        
         if (optionElementId === "all") {
             dispatch(getVideoGames())
          } else {
             dispatch(genresFilter(optionElementId))
         }
-    };
+    }
 
     return (
         <div className={style.SelectContiner}>
@@ -32,6 +33,6 @@ const FilterGenres = () => {
             </select>
         </div>
     )
-};
+}
 
-export default FilterGenres;
+export default FilterGenres

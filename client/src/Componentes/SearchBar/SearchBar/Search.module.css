@@ -1,22 +1,19 @@
 .SearchContainer {
     display: flex;
     align-items: center;
-  }
-  
-  .SearchInput {
+}
+.SearchInput {
     padding: 2px;
     border: 2px solid #03071E;
     border-radius: 5px;
     margin-right: 10px;
     font-size: 14px;
     background-color: #F48C06;
-  }
-
-  .SearchInput::placeholder {
+}
+.SearchInput::placeholder {
     color: black;
-  }
-  
-  .SearchButton {
+}
+.SearchButton {
     background-color: #03071E;
     color: white;
     padding: 2px 12px;
@@ -24,9 +21,7 @@
     border-radius: 5px;
     font-size: 14px;
     cursor: pointer;
-  }
-  
-  .SearchButton:hover {
+}
+.SearchButton:hover {
     background-color: #FFBA08;
-  }
-  
+}

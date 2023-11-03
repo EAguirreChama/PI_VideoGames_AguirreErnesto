@@ -1,25 +1,24 @@
-import React from "react";
-import { useState } from "react";
-import { useDispatch } from "react-redux";
-import { getVideoGameName } from "../../../redux/ActionsGames/getVideoGameName";
 import style from "./Search.module.css"
+import React from "react"
+
+import { useState } from "react"
+import { useDispatch } from "react-redux"
+import { getVideoGameName } from "../../../redux/ActionsGames/getVideoGameName"
 
 const Search = () => {
-
-    const dispatch = useDispatch();
-
+    const dispatch = useDispatch()
     const [name, setName] = useState("")
 
     const handleInput = (event) => {
         event.preventDefault()
         setName(event.target.value)
-    };
+    }
 
     const handleSubmit = (event) => {
         event.preventDefault()
         dispatch(getVideoGameName(name))
         setName("")
-    };
+    }
 
     return (
         <div className={style.SearchContainer}>
@@ -27,6 +26,6 @@ const Search = () => {
             <button onClick={(event) => handleSubmit(event)} type="submit" className={style.SearchButton}>Buscar</button>
         </div>
     )
-};
+}
 
-export default Search;
+export default Search

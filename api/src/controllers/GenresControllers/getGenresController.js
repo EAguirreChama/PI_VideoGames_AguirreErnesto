@@ -1,5 +1,6 @@
-const axios = require("axios")
 require("dotenv").config()
+
+const axios = require("axios")
 const { API_KEY } = process.env
 const URL = "https://api.rawg.io/api/genres"
 const { Genre } = require("../../db")
@@ -12,10 +13,10 @@ const getGenresController = async () => {
             await Genre.create({
                 name: result.name,
             });
-        }
+        };
         return Genre.findAll();
-    }
+    };
     return dbGenres
 };
 
-module.exports = getGenresController
+module.exports = getGenresController;

@@ -1,13 +1,14 @@
 const { Router } = require ("express");
 
+const VideoGamesRout = Router();
+
 const allGamesHandler = require ("../handlers/GamesHandler/allGamesHandler");
 const idGameHandler = require ("../handlers/GamesHandler/idGameHandler");
 const postGameHandler = require ("../handlers/GamesHandler/postGameHandler");
 const deleteGameHandler = require ("../handlers/GamesHandler/deleteGameHandler")
 
-const VideoGamesRout = Router();
-
 // Rutas
+
 // Ruta para traer todos los VideoGames con su informacion y buscar por nombre
 VideoGamesRout.get("/" , allGamesHandler);
 

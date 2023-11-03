@@ -1,10 +1,9 @@
-import { Link, useLocation } from "react-router-dom";
 import styles from "./NavBar.module.css"
+import { Link, useLocation } from "react-router-dom"
 
 const NavBar = () => {
-
-    const location = useLocation();
-
+    const location = useLocation()
+    
     return (
         <div className={styles.NavBarStyle}>
             <Link to="/">Volver a Inicio</Link>
@@ -14,4 +13,4 @@ const NavBar = () => {
     )
 }
 
-export default NavBar;
+export default NavBar
