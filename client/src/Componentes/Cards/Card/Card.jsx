@@ -16,12 +16,15 @@ const Card = ({ image, name, genres, id , rating}) => {
             <Link to={`/detailVideoGame/${id}`}>
                 <img src={image} alt=""/>
             </Link>
+            
             <div>
                 <p className={style.Name}>{name}</p>
             </div>
+
             <div className={style.boton}>
                 <GenresButton onClick={expandir} mostrarGenres={mostrarGenres}/>
             </div>
+
             {mostrarGenres && (
                 <ul>
                     {genres.map((genero => (
@@ -29,6 +32,7 @@ const Card = ({ image, name, genres, id , rating}) => {
                     )))}
                 </ul>
             )}
+
             <p className={style.Name}> Rating: {rating}</p>
         </div>
     )
