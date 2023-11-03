@@ -13,8 +13,8 @@ const gamesName = async (name) => {
         where: {
             name: {
                 [Op.iLike]: `%${name}%`
-            };
-        };
+            }
+        }
     });
     const { data }  = await axios.get (`${URL}?key=${API_KEY}&search=${name}`)
     
